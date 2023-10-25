@@ -90,14 +90,15 @@ if __name__ == "__main__":
         "aleatorio": PergType.ALEATORIO
     }
     
-    tema = input("Escolha um tema (capitais, biologia, quimica, astronomia, geografia, aleatorio): ").lower()
-    
-    tema_enum = tema_escolhas.get(tema)
-    
-    if tema_enum is not None:
-        print(f"Jogador {jogador.nome}, você escolheu o tema: {tema_enum.value}")
-    else:
-        print("Tema inválido. Por favor, escolha um tema válido.")
+    tema_enum = None
+    while tema_enum is None:
+        tema = input("Escolha um tema (capitais, biologia, quimica, astronomia, geografia, aleatorio): ").lower()
+        tema_enum = tema_escolhas.get(tema)
+        
+        if tema_enum is not None:
+            print(f"Jogador {jogador.nome}, você escolheu o tema: {tema_enum.value}")
+        else:
+            print("Tema inválido. Por favor, escolha um tema válido.")
     
     
     perguntas = []
