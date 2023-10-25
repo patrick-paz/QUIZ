@@ -77,7 +77,31 @@ class PerguntasLoader:
             data = json.load(json_file)
             return data
         
+        
+class Quiz:
+    def __init__(self, perguntas):
+        self.perguntas = perguntas
+        self.indice_pergunta = 0
+
+
+    def iniciar(self):
+        while self.indice_pergunta < len(self.perguntas):
+            perguntas = self.perguntas[self.indice_pergunta]
+            print(f"Pergunta {self.indice_pergunta + 1}: {perguntas.pergunta}")
+            for i, resposta in enumerate(perguntas.respostas):
+                print(f"{i + 1}. {resposta}")
+            user_answer = int(input("Escolha sua resposta: ")) - 1  # Subtrai 1 para obter o índice correto na lista
+            
+            if perguntas.respostas[user_answer] == perguntas.resposta_correta:
+                print("Acertou!")
+            else:
+                print("Errou. A resposta correta era:", perguntas.resposta_correta)
+            
+            self.indice_pergunta += 1
+
+        
 if __name__ == "__main__":
+    
     
     jogador = Jogador(input("Insira seu nome: "))
     data = PerguntasLoader.carregar_perguntas('data.json')
@@ -103,9 +127,13 @@ if __name__ == "__main__":
     
     perguntas = []
     perguntas = PerguntasFactory.criar(data, tema_enum)
-    for pergunta in perguntas:
-        print("Pergunta:", pergunta.pergunta)
-        print("Opções de Resposta:")
-        for resposta in pergunta.respostas:
-            print(resposta)
-        print("Resposta Correta:", pergunta.resposta_correta)
+    
+    quiz = Quiz(perguntas)
+    quiz.iniciar()
+    
+    # for pergunta in perguntas:
+    #     print("Pergunta:", pergunta.pergunta)
+    #     print("Opções de Resposta:")
+    #     for resposta in pergunta.respostas:
+    #         print(resposta)
+    #     print("Resposta Correta:", pergunta.resposta_correta)
