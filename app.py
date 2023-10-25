@@ -50,13 +50,13 @@ class PerguntasFactory:
             for resposta in pergunta_data['resposta']:
                 opcao = resposta['opcao']
                 resCorreta = resposta['resCorreta']
-                respostas.append({'opcao': opcao, 'correta': resCorreta})
+                respostas.append(opcao)
                 if resCorreta:
-                    resposta_correta = resposta['opcao']
+                    resposta_correta = opcao
             pergunta = Pergunta(
                 pergunta_data['id'],
                 pergunta_data['pergunta'],
-                resposta,
+                respostas,
                 pergunta_data['tema'],
                 pergunta_data['dificuldade'],
                 resposta_correta
@@ -103,7 +103,8 @@ if __name__ == "__main__":
     perguntas = []
     perguntas = PerguntasFactory.criar(data, tema_enum)
     for pergunta in perguntas:
-        print(f"Pergunta: {pergunta.pergunta} respostas: {pergunta.respostas}")
-        # print("Opções de resposta:")
-        # for idx, opcao in enumerate(pergunta.respostas, start=1):
-        #     print(f"{idx}. {opcao['opcao']}")
+        print("Pergunta:", pergunta.pergunta)
+        print("Opções de Resposta:")
+        for resposta in pergunta.respostas:
+            print(resposta)
+        print("Resposta Correta:", pergunta.resposta_correta)
