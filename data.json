@@ -1,0 +1,964 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Qual a capital da India?",
+        "resposta": [
+            {
+                "opcao": "Bombaim",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Delhi",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Nova Delhi",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Calcutá",
+                "resCorreta": false
+            }
+        ],
+        "tema": "capitais",
+        "dificuldade": 1
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual a capital do Brasil?",
+        "resposta": [
+            {
+                "opcao": "Rio de Janeiro",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Brasília",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Foz do Iguaçu",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Recife",
+                "resCorreta": false
+            }
+        ],
+        "tema": "capitais",
+        "dificuldade": 1
+    },
+    {
+        "id": 3,
+        "pergunta": "Qual a capital da Finlândia?",
+        "resposta": [
+            {
+                "opcao": "Oulu",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Turku",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Tampere",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Helsinque",
+                "resCorreta": true
+            }
+        ],
+        "tema": "capitais",
+        "dificuldade": 2
+    },
+    {
+        "id": 4,
+        "pergunta": "Qual a capital de Vanuatu?",
+        "resposta": [
+            {
+                "opcao": "Porto Vila",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Forari",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Sola",
+                "resCorreta": false
+            },
+            {
+                "opcao": "White Sands",
+                "resCorreta": false
+            }
+        ],
+        "tema": "capitais",
+        "dificuldade": 3
+    },
+    {
+        "id": 5,
+        "pergunta": "Qual a capital da Indonésia?",
+        "resposta": [
+            {
+                "opcao": "Mataram",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Batu",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Surakarta",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Jacarta",
+                "resCorreta": true
+            }
+        ],
+        "tema": "capitais",
+        "dificuldade": 2
+    },
+    {
+        "id": 6,
+        "pergunta": "Qual a capital do Butão?",
+        "resposta": [
+            {
+                "opcao": "Timbu",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Paro",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Mongar",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Ha",
+                "resCorreta": false
+            }
+        ],
+        "tema": "capitais",
+        "dificuldade": 3
+    },
+    {
+        "id": 7,
+        "pergunta": "Qual a capital da Armênia?",
+        "resposta": [
+            {
+                "opcao": "Vanadzor",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Gavar",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Hrazdan",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Yerevan",
+                "resCorreta": true
+            }
+        ],
+        "tema": "capitais",
+        "dificuldade": 3
+    },
+    {
+        "id": 8,
+        "pergunta": "Qual a capital de Liechtenstein?",
+        "resposta": [
+            {
+                "opcao": "Vaduz",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Eschen",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Mauren",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Sennwald",
+                "resCorreta": false
+            }
+        ],
+        "tema": "capitais",
+        "dificuldade": 3
+    },
+    {
+        "id": 9,
+        "pergunta": "Qual a capital do Timor-Leste?",
+        "resposta": [
+            {
+                "opcao": "Aileu",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Lolotoi",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Bazartete",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Díli",
+                "resCorreta": true
+            }
+        ],
+        "tema": "capitais",
+        "dificuldade": 3
+    },
+    {
+        "id": 10,
+        "pergunta": "Qual a capital de Malta?",
+        "resposta": [
+            {
+                "opcao": "Sliema",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Valeta",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Birgu",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Mdina",
+                "resCorreta": false
+            }
+        ],
+        "tema": "capitais",
+        "dificuldade": 3
+    },
+    {
+        "id": 11,
+        "pergunta": "Qual é o maior animal terrestre do mundo?",
+        "resposta": [
+            {
+                "opcao": "Elefante africano",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Girafa",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Rinoceronte",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Elefante asiático",
+                "resCorreta": false
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 1
+    },
+    {
+        "id": 12,
+        "pergunta": "Qual é o animal mais rápido do mundo?",
+        "resposta": [
+            {
+                "opcao": "Guepardo",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Leão",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Leopardo",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Hiena",
+                "resCorreta": false
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 1
+    },
+    {
+        "id": 13,
+        "pergunta": "Qual é o maior réptil do mundo?",
+        "resposta": [
+            {
+                "opcao": "Iguana",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Jacaré",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Cobra",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Crocodilo-de-água-salgada",
+                "resCorreta": true
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 2
+    },
+    {
+        "id": 14,
+        "pergunta": "Quais são os animais que pertencem à ordem Carnivora?",
+        "resposta": [
+            {
+                "opcao": "Leões",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Vacas",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Cavalos",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Golfinhos",
+                "resCorreta": false
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 2
+    },
+    {
+        "id": 15,
+        "pergunta": "Qual é o órgão responsável pela produção de bile em mamíferos?",
+        "resposta": [
+            {
+                "opcao": "Pâncreas",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Fígado",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Estômago",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Rins",
+                "resCorreta": false
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 3
+    },
+    {
+        "id": 16,
+        "pergunta": "Quantos tentáculos têm os polvos?",
+        "resposta": [
+            {
+                "opcao": "4",
+                "resCorreta": false
+            },
+            {
+                "opcao": "6",
+                "resCorreta": false
+            },
+            {
+                "opcao": "8",
+                "resCorreta": true
+            },
+            {
+                "opcao": "10",
+                "resCorreta": false
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 2
+    },
+    {
+        "id": 17,
+        "pergunta": "Qual é o maior grupo de mamíferos?",
+        "resposta": [
+            {
+                "opcao": "Monotremados",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Eutérios",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Artrópodes",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Marsupiais",
+                "resCorreta": false
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 3
+    },
+    {
+        "id": 18,
+        "pergunta": "Qual é o animal símbolo da conservação da vida marinha?",
+        "resposta": [
+            {
+                "opcao": "Golfinho",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Tartaruga marinha",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Baleia",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Polvo",
+                "resCorreta": false
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 2
+    },
+    {
+        "id": 19,
+        "pergunta": "Qual é o mamífero voador mais conhecido?",
+        "resposta": [
+            {
+                "opcao": "Morcego",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Esquilo",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Pica-pau",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Beija-flor",
+                "resCorreta": false
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 1
+    },
+    {
+        "id": 20,
+        "pergunta": "Qual é o animal que se alimenta exclusivamente de bambu e é conhecido por sua resistência?",
+        "resposta": [
+            {
+                "opcao": "Panda-vermelho",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Panda-gigante",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Coala",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Canguru",
+                "resCorreta": false
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 1
+    },
+    {
+        "id": 21,
+        "pergunta": "Qual é o elemento químico mais abundante na crosta terrestre?",
+        "resposta": [
+            {
+                "opcao": "Oxigênio",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Carbono",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Silício",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Ferro",
+                "resCorreta": false
+            }
+        ],
+        "tema": "química",
+        "dificuldade": 2
+    },
+    {
+        "id": 22,
+        "pergunta": "Qual é o planeta mais próximo do Sol?",
+        "resposta": [
+            {
+                "opcao": "Marte",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Vênus",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Mercúrio",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Júpiter",
+                "resCorreta": false
+            }
+        ],
+        "tema": "astronomia",
+        "dificuldade": 1
+    },
+    {
+        "id": 23,
+        "pergunta": "Qual é o processo pelo qual as plantas convertem a luz solar em energia?",
+        "resposta": [
+            {
+                "opcao": "Fotossíntese",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Respiração",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Transpiração",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Germinação",
+                "resCorreta": false
+            }
+        ],
+        "tema": "biologia",
+        "dificuldade": 2
+    },
+    {
+        "id": 24,
+        "pergunta": "Qual é a maior cordilheira do mundo?",
+        "resposta": [
+            {
+                "opcao": "Cordilheira dos Andes",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Cordilheira do Himalaia",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Cordilheira dos Alpes",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Cordilheira dos Apalaches",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 3
+    },
+    {
+        "id": 25,
+        "pergunta": "Qual é o país mais populoso do mundo?",
+        "resposta": [
+            {
+                "opcao": "Índia",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Estados Unidos",
+                "resCorreta": false
+            },
+            {
+                "opcao": "China",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Brasil",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 1
+    },
+    {
+        "id": 26,
+        "pergunta": "Qual é a maior montanha do mundo?",
+        "resposta": [
+            {
+                "opcao": "Monte Kilimanjaro",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Monte Everest",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Monte Fuji",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Monte McKinley",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 3
+    },
+    {
+        "id": 27,
+        "pergunta": "Qual é o maior deserto do mundo?",
+        "resposta": [
+            {
+                "opcao": "Deserto do Saara",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Deserto de Atacama",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Deserto de Gobi",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Deserto da Arábia",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 2
+    },
+    {
+        "id": 28,
+        "pergunta": "Qual é o rio mais longo do mundo?",
+        "resposta": [
+            {
+                "opcao": "Rio Amazonas",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Rio Nilo",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Rio Yangtzé",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Rio Mississipi",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 2
+    },
+    {
+        "id": 29,
+        "pergunta": "Qual é o país conhecido como a 'Terra do Sol Nascente'?",
+        "resposta": [
+            {
+                "opcao": "Austrália",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Espanha",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Japão",
+                "resCorreta": true
+            },
+            {
+                "opcao": "México",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 1
+    },
+    {
+        "id": 30,
+        "pergunta": "Qual é o ponto mais profundo dos oceanos da Terra?",
+        "resposta": [
+            {
+                "opcao": "Fossa das Marianas",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Fossa de Porto Rico",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Fossa do Japão",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Fossa de Tonga",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 3
+    },
+    {
+        "id": 31,
+        "pergunta": "Qual é o rio que forma as Cataratas do Iguaçu?",
+        "resposta": [
+            {
+                "opcao": "Rio Iguaçu",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Rio Paraná",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Rio Amazonas",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Rio Monjolo",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 2
+    },
+    {
+        "id": 32,
+        "pergunta": "Qual é o maior planeta do sistema solar?",
+        "resposta": [
+            {
+                "opcao": "Vênus",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Marte",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Júpiter",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Saturno",
+                "resCorreta": false
+            }
+        ],
+        "tema": "astronomia",
+        "dificuldade": 2
+    },
+    {
+        "id": 33,
+        "pergunta": "Qual é o país mais extenso do mundo em área territorial?",
+        "resposta": [
+            {
+                "opcao": "China",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Canadá",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Rússia",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Estados Unidos",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 2
+    },
+    {
+        "id": 34,
+        "pergunta": "Qual é o elemento químico mais leve?",
+        "resposta": [
+            {
+                "opcao": "Hidrogênio",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Hélio",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Lítio",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Oxigênio",
+                "resCorreta": false
+            }
+        ],
+        "tema": "química",
+        "dificuldade": 1
+    },
+    {
+        "id": 35,
+        "pergunta": "Qual é o segundo maior oceano do mundo em termos de área?",
+        "resposta": [
+            {
+                "opcao": "Oceano Índico",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Oceano Pacífico",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Oceano Atlântico",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Oceano Antártico",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 2
+    },
+    {
+        "id": 36,
+        "pergunta": "Qual é o planeta conhecido como o 'Planeta Vermelho'?",
+        "resposta": [
+            {
+                "opcao": "Vênus",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Marte",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Júpiter",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Saturno",
+                "resCorreta": false
+            }
+        ],
+        "tema": "astronomia",
+        "dificuldade": 1
+    },
+    {
+        "id": 37,
+        "pergunta": "Qual é o país mais populoso da África?",
+        "resposta": [
+            {
+                "opcao": "Nigéria",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Etiópia",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Egito",
+                "resCorreta": false
+            },
+            {
+                "opcao": "África do Sul",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 2
+    },
+    {
+        "id": 38,
+        "pergunta": "Qual é a capital do Canadá?",
+        "resposta": [
+            {
+                "opcao": "Montreal",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Ottawa",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Toronto",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Vancouver",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 1
+    },
+    {
+        "id": 39,
+        "pergunta": "Qual é o metal mais abundante na crosta terrestre?",
+        "resposta": [
+            {
+                "opcao": "Ouro",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Prata",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Cobre",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Alumínio",
+                "resCorreta": true
+            }
+        ],
+        "tema": "química",
+        "dificuldade": 2
+    },
+    {
+        "id": 40,
+        "pergunta": "Qual é o maior rio do mundo em termos de volume de água?",
+        "resposta": [
+            {
+                "opcao": "Rio Amazonas",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Rio Nilo",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Rio Yangtzé",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Rio Mississippi",
+                "resCorreta": false
+            }
+        ],
+        "tema": "geografia",
+        "dificuldade": 2
+    }
+
+
+]
