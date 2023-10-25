@@ -87,7 +87,8 @@ class Quiz:
     def iniciar(self):
         while self.indice_pergunta < len(self.perguntas):
             perguntas = self.perguntas[self.indice_pergunta]
-            print(f"Pergunta {self.indice_pergunta + 1}: {perguntas.pergunta}")
+            print("#" * 40)
+            print(f"Tema: {perguntas.tema} -- Pergunta {self.indice_pergunta + 1}: {perguntas.pergunta}")
             for i, resposta in enumerate(perguntas.respostas):
                 print(f"{i + 1}. {resposta}")
             user_answer = int(input("Escolha sua resposta: ")) - 1  # Subtrai 1 para obter o índice correto na lista
