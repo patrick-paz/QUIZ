@@ -1,12 +1,36 @@
 import json
 from enum import Enum
 import random
+from abc import ABC
 
-class Jogador:
-    def __init__(self, nome, acertos=0):
+
+
+class Subject(ABC): # Aquele que notifica os interessados
+    """ Abstract subject """
+    def inscrever(self, observer):
+        pass
+    def notificar(self):
+        pass
+class Observer(ABC):
+    def atualizar(self):
+        pass
+
+class Jogador(Observer):
+    def __init__(self, nome, acertos=0, subject=None):
         self.nome = nome
         self.acertos = acertos
-
+        self.subject = subject
+        if subject:
+            
+            subject.inscrever(self)
+            
+    def atualizar(self):
+        self.acertos += 1
+        print()
+        print("#"*18)
+        print(f"### ACERTOS: {self.acertos} ###")
+        print("#"*18)
+        print()
 class Pergunta:
     def __init__(self, id, pergunta, respostas, tema, dificuldade, resposta_correta):
         self.id = id
@@ -78,11 +102,19 @@ class PerguntasLoader:
             return data
         
         
-class Quiz:
+class Quiz(Subject):
     def __init__(self, perguntas):
         self.perguntas = perguntas
         self.indice_pergunta = 0
+        self.inscritos = []
 
+    def inscrever(self, observer):
+        if observer not in self.inscritos:
+            self.inscritos.append(observer)
+            
+    def notificar(self):
+        for observer in self.inscritos:
+            observer.atualizar()
 
     def iniciar(self):
         while self.indice_pergunta < len(self.perguntas):
@@ -91,14 +123,16 @@ class Quiz:
             print(f"Tema: {perguntas.tema} -- Pergunta {self.indice_pergunta + 1}: {perguntas.pergunta}")
             for i, resposta in enumerate(perguntas.respostas):
                 print(f"{i + 1}. {resposta}")
-            user_answer = int(input("Escolha sua resposta: ")) - 1  # Subtrai 1 para obter o índice correto na lista
+            resposta_jogador = int(input("Escolha sua resposta: ")) - 1  # Subtrai 1 para obter o índice correto na lista
             
-            if perguntas.respostas[user_answer] == perguntas.resposta_correta:
+            if perguntas.respostas[resposta_jogador] == perguntas.resposta_correta:
                 print("Acertou!")
+                self.notificar()
             else:
                 print("Errou. A resposta correta era:", perguntas.resposta_correta)
             
             self.indice_pergunta += 1
+            
 
         
 if __name__ == "__main__":
@@ -114,27 +148,29 @@ if __name__ == "__main__":
         "geografia": PergType.GEOGRAFIA,
         "aleatorio": PergType.ALEATORIO
     }
-    
+    print()
     tema_enum = None
     while tema_enum is None:
         tema = input("Escolha um tema (capitais, biologia, quimica, astronomia, geografia, aleatorio): ").lower()
         tema_enum = tema_escolhas.get(tema)
         
         if tema_enum is not None:
+            print()
             print(f"Jogador {jogador.nome}, você escolheu o tema: {tema_enum.value}")
         else:
+            print()
             print("Tema inválido. Por favor, escolha um tema válido.")
     
-    
+    print()
     perguntas = []
     perguntas = PerguntasFactory.criar(data, tema_enum)
     
     quiz = Quiz(perguntas)
+    quiz.inscrever(jogador)
+    
     quiz.iniciar()
     
-    # for pergunta in perguntas:
-    #     print("Pergunta:", pergunta.pergunta)
-    #     print("Opções de Resposta:")
-    #     for resposta in pergunta.respostas:
-    #         print(resposta)
-    #     print("Resposta Correta:", pergunta.resposta_correta)
+    total_perg = len(perguntas)
+    print("="*40)
+    print(f"======== TOTAL DE ACERTOS: {jogador.acertos} / {total_perg} =======")
+    print("="*40)
