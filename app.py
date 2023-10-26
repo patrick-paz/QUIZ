@@ -172,5 +172,5 @@ if __name__ == "__main__":
     
     total_perg = len(perguntas)
     print("="*40)
-    print(f"======== TOTAL DE ACERTOS: {jogador.acertos} / {total_perg} =======")
+    print(f"======= TOTAL DE ACERTOS: {jogador.acertos} / {total_perg} =======")
     print("="*40)
