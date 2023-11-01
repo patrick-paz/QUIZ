@@ -4,7 +4,7 @@ import random
 from abc import ABC
 
 
-
+# (1) - Padrão Observer
 class Subject(ABC): # Aquele que notifica os interessados
     """ Abstract subject """
     def inscrever(self, observer):
@@ -103,10 +103,11 @@ class PerguntasLoader:
         
         
 class Quiz(Subject):
-    def __init__(self, perguntas):
+    def __init__(self, perguntas, total = 3):
         self.perguntas = perguntas
         self.indice_pergunta = 0
         self.inscritos = []
+        self.total = total
 
     def inscrever(self, observer):
         if observer not in self.inscritos:
@@ -120,7 +121,7 @@ class Quiz(Subject):
         while self.indice_pergunta < len(self.perguntas):
             perguntas = self.perguntas[self.indice_pergunta]
             print("#" * 40)
-            print(f"Tema: {perguntas.tema} -- Pergunta {self.indice_pergunta + 1}: {perguntas.pergunta}")
+            print(f"Tema: {perguntas.tema} -- [{i}/{self.total}] Pergunta {self.indice_pergunta + 1}: {perguntas.pergunta}")
             for i, resposta in enumerate(perguntas.respostas):
                 print(f"{i + 1}. {resposta}")
             resposta_jogador = int(input("Escolha sua resposta: ")) - 1  # Subtrai 1 para obter o índice correto na lista
@@ -151,7 +152,7 @@ if __name__ == "__main__":
     print()
     tema_enum = None
     while tema_enum is None:
-        tema = input("Escolha um tema (capitais, biologia, quimica, astronomia, geografia, aleatorio): ").lower()
+        tema = input("Digite o tema (capitais, biologia, quimica, astronomia, geografia, aleatorio): ").lower()
         tema_enum = tema_escolhas.get(tema)
         
         if tema_enum is not None:
@@ -165,7 +166,7 @@ if __name__ == "__main__":
     perguntas = []
     perguntas = PerguntasFactory.criar(data, tema_enum)
     
-    quiz = Quiz(perguntas)
+    quiz = Quiz(perguntas, 3)
     quiz.inscrever(jogador)
     
     quiz.iniciar()
