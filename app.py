@@ -63,29 +63,40 @@ class PergType(Enum):
     GEOGRAFIA = "geografia"
     ALEATORIO = "aleatorio"
         
+def load_questao():
+    perguntas = []
+    perguntas_select = []
+    for pergunta_data in data:
+        respostas = []
+        resposta_correta = None
+        for resposta in pergunta_data['resposta']:
+            opcao = resposta['opcao']
+            resCorreta = resposta['resCorreta']
+            respostas.append(opcao)
+            if resCorreta:
+                resposta_correta = opcao
+
+        #pergunta = PerguntasFactory.criar()
+
 class PerguntasFactory:
 
     def criar(data, tema: PergType):
-        perguntas = []
-        perguntas_select = []
-        for pergunta_data in data:
-            respostas = []
-            resposta_correta = None
-            for resposta in pergunta_data['resposta']:
-                opcao = resposta['opcao']
-                resCorreta = resposta['resCorreta']
-                respostas.append(opcao)
-                if resCorreta:
-                    resposta_correta = opcao
-            pergunta = Pergunta(
-                pergunta_data['id'],
-                pergunta_data['pergunta'],
-                respostas,
-                pergunta_data['tema'],
-                pergunta_data['dificuldade'],
-                resposta_correta
-            )
-            perguntas.append(pergunta)
+
+        # Factory
+        pergunta = Pergunta(
+            data['id'],
+            pergunta_data['pergunta'],
+            respostas,
+            pergunta_data['tema'],
+            pergunta_data['dificuldade'],
+            resposta_correta
+        )
+
+        return pergunta
+    
+        # load
+
+        perguntas.append(pergunta)
             
         if tema != PergType.ALEATORIO:
             perguntas_select = SelecaoPorTema.selecionar(perguntas,tema.value)
