@@ -63,39 +63,49 @@ class PergType(Enum):
     GEOGRAFIA = "geografia"
     ALEATORIO = "aleatorio"
         
-def load_questao():
-    perguntas = []
-    perguntas_select = []
-    for pergunta_data in data:
-        respostas = []
-        resposta_correta = None
-        for resposta in pergunta_data['resposta']:
-            opcao = resposta['opcao']
-            resCorreta = resposta['resCorreta']
-            respostas.append(opcao)
-            if resCorreta:
-                resposta_correta = opcao
+
 
         #pergunta = PerguntasFactory.criar()
 
 class PerguntasFactory:
 
-    def criar(data, tema: PergType):
+    def criar(data):
 
         # Factory
+        respostas = []
+        for resposta in data['resposta']:
+            opcao = resposta['opcao']
+            resCorreta = resposta['resCorreta']
+            respostas.append(opcao)
+            if resCorreta:
+                resposta_correta = opcao
         pergunta = Pergunta(
             data['id'],
-            pergunta_data['pergunta'],
+            data['pergunta'],
             respostas,
-            pergunta_data['tema'],
-            pergunta_data['dificuldade'],
+            data['tema'],
+            data['dificuldade'],
             resposta_correta
         )
 
         return pergunta
     
         # load
-
+class PerguntasSelect:
+    
+    def load_questao():
+        perguntas = []
+        perguntas_select = []
+        for pergunta_data in data:
+            respostas = []
+            resposta_correta = None
+            for resposta in pergunta_data['resposta']:
+                opcao = resposta['opcao']
+                resCorreta = resposta['resCorreta']
+                respostas.append(opcao)
+                if resCorreta:
+                    resposta_correta = opcao
+    
         perguntas.append(pergunta)
             
         if tema != PergType.ALEATORIO:
@@ -127,6 +137,8 @@ class Quiz(Subject):
     def notificar(self):
         for observer in self.inscritos:
             observer.atualizar()
+
+
 
     def iniciar(self):
         while self.indice_pergunta < len(self.perguntas):
