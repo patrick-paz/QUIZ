@@ -51,8 +51,8 @@ class SelecaoPorTema(TemaStrategy):
 
 class SelecaoAleatoria(TemaStrategy):
     def selecionar(perguntas):
-        numero_de_perguntas = 10 
-        return random.sample([pergunta for pergunta in perguntas], numero_de_perguntas)
+        numero_perguntas = 10
+        return random.sample([pergunta for pergunta in perguntas], numero_perguntas)
 
 class PergType(Enum):
     
@@ -93,23 +93,15 @@ class PerguntasFactory:
         # load
 class PerguntasSelect:
     
-    def load_questao():
+    def load_questao(data, tema: PergType):
         perguntas = []
         perguntas_select = []
         for pergunta_data in data:
-            respostas = []
-            resposta_correta = None
-            for resposta in pergunta_data['resposta']:
-                opcao = resposta['opcao']
-                resCorreta = resposta['resCorreta']
-                respostas.append(opcao)
-                if resCorreta:
-                    resposta_correta = opcao
-    
-        perguntas.append(pergunta)
+            pergunta = PerguntasFactory.criar(pergunta_data)
+            perguntas.append(pergunta)
             
         if tema != PergType.ALEATORIO:
-            perguntas_select = SelecaoPorTema.selecionar(perguntas,tema.value)
+            perguntas_select = SelecaoPorTema.selecionar(perguntas, tema.value)
         elif tema == PergType.ALEATORIO:
             perguntas_select = SelecaoAleatoria.selecionar(perguntas)
         
@@ -124,7 +116,7 @@ class PerguntasLoader:
         
         
 class Quiz(Subject):
-    def __init__(self, perguntas, total = 3):
+    def __init__(self, perguntas, total):
         self.perguntas = perguntas
         self.indice_pergunta = 0
         self.inscritos = []
@@ -141,10 +133,10 @@ class Quiz(Subject):
 
 
     def iniciar(self):
-        while self.indice_pergunta < len(self.perguntas):
+        while self.indice_pergunta < self.total:
             perguntas = self.perguntas[self.indice_pergunta]
             print("#" * 40)
-            print(f"Tema: {perguntas.tema} -- [{i}/{self.total}] Pergunta {self.indice_pergunta + 1}: {perguntas.pergunta}")
+            print(f"Tema: {perguntas.tema} -- [{self.indice_pergunta + 1}/{self.total}] Pergunta {self.indice_pergunta + 1}: {perguntas.pergunta}")
             for i, resposta in enumerate(perguntas.respostas):
                 print(f"{i + 1}. {resposta}")
             resposta_jogador = int(input("Escolha sua resposta: ")) - 1  # Subtrai 1 para obter o índice correto na lista
@@ -157,11 +149,7 @@ class Quiz(Subject):
             
             self.indice_pergunta += 1
             
-
-        
-if __name__ == "__main__":
-    
-    
+def testar_terminal():
     jogador = Jogador(input("Insira seu nome: "))
     data = PerguntasLoader.carregar_perguntas('data.json')
     tema_escolhas = {
@@ -187,14 +175,21 @@ if __name__ == "__main__":
     
     print()
     perguntas = []
-    perguntas = PerguntasFactory.criar(data, tema_enum)
+    perguntas = PerguntasSelect.load_questao(data, tema_enum)
     
-    quiz = Quiz(perguntas, 3)
+    qtdperg = int(input("Quantas perguntas deseja: "))
+    
+    quiz = Quiz(perguntas, qtdperg)
     quiz.inscrever(jogador)
     
     quiz.iniciar()
     
-    total_perg = len(perguntas)
+
     print("="*40)
-    print(f"======= TOTAL DE ACERTOS: {jogador.acertos} / {total_perg} =======")
+    print(f"======= TOTAL DE ACERTOS: {jogador.acertos} / {qtdperg} =======")
     print("="*40)
+
+        
+if __name__ == "__main__":
+    
+    testar_terminal()
