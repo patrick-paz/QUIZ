@@ -190,6 +190,6 @@ def testar_terminal():
     print("="*40)
 
         
-if __name__ == "__main__":
+# if __name__ == "__main__":
     
-    testar_terminal()
+#     testar_terminal()
