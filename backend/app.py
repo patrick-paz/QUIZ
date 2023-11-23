@@ -148,8 +148,12 @@ class Quiz(Subject):
                 print("Errou. A resposta correta era:", perguntas.resposta_correta)
             
             self.indice_pergunta += 1
+
+
+##### FUNÇÃO PARA TESTAR NO TERMINAL #####
             
 def testar_terminal():
+    
     jogador = Jogador(input("Insira seu nome: "))
     data = PerguntasLoader.carregar_perguntas('data.json')
     tema_escolhas = {

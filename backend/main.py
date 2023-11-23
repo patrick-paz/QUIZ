@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
-from . app import load_questao
+from app import PerguntasLoader
+
 # 
 app = FastAPI()
 
@@ -10,4 +11,6 @@ def read_root():
 
 @app.get("/questoes")
 def carregar_questao():
-    return {"questões"}
+    data = 'data.json'
+    questoes = PerguntasLoader.carregar_perguntas(data)
+    return questoes
