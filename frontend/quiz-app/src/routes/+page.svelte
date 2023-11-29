@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<section>
+	<h1>Quiz - app</h1>
+	<div>
+			<h2>Clique para Começar o quiz:</h2>
+
+			<span>
+				Start Quiz
+			</span>
+
+
+	</div>
+</section>

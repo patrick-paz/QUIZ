@@ -9,18 +9,19 @@ app = FastAPI()
 #     nome: str
 
 # Endpoint para carregar perguntas
-@app.get("/questoes")
-def carregar_questao():
-    data = 'data.json'
-    questoes = PerguntasLoader.carregar_perguntas(data)
-    return questoes
+# @app.get("/questoes")
+# def carregar_questao():
+#     data = 'data.json'
+#     questoes = PerguntasLoader.carregar_perguntas(data)
+#     return questoes
 
 # Endpoint para iniciar o quiz
-@app.post("/tema")
-def iniciar_quiz(data, tema: PergType):
-    # jogador = Jogador(nome=jogador_data.nome)
+@app.post("/questoes")
+def questões_quiz(tema: PergType, qtd_perg: int):
 
-    perguntas = PerguntasSelect.load_questao(data, tema)
+    data = 'data.json'
+    questoes = PerguntasLoader.carregar_perguntas(data)
+    perguntas = PerguntasSelect.load_questao(questoes, tema,qtd_perg)
     
     if not perguntas:
         raise HTTPException(status_code=404, detail="Nenhuma pergunta disponível para o tema selecionado.")
