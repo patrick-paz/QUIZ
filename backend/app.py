@@ -26,11 +26,13 @@ class Jogador(Observer):
             
     def atualizar(self):
         self.acertos += 1
-        print()
-        print("#"*18)
-        print(f"### ACERTOS: {self.acertos} ###")
-        print("#"*18)
-        print()
+        
+        # print()
+        # print("#"*18)
+        # print(f"### ACERTOS: {self.acertos} ###")
+        # print("#"*18)
+        # print()
+
 class Pergunta:
     def __init__(self, id, pergunta, respostas, tema, dificuldade, resposta_correta):
         self.id = id

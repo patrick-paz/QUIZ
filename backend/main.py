@@ -5,8 +5,8 @@ from app import PerguntasLoader, Jogador, Quiz, PerguntasSelect, PergType
 app = FastAPI()
 
 # Modelo Pydantic para receber dados do jogador
-class JogadorData(BaseModel):
-    nome: str
+# class JogadorData(BaseModel):
+#     nome: str
 
 # Endpoint para carregar perguntas
 @app.get("/questoes")
@@ -16,10 +16,10 @@ def carregar_questao():
     return questoes
 
 # Endpoint para iniciar o quiz
-@app.post("/quiz")
-def iniciar_quiz(tema: PergType):
+@app.post("/tema")
+def iniciar_quiz(data, tema: PergType):
     # jogador = Jogador(nome=jogador_data.nome)
-    data = PerguntasLoader.carregar_perguntas('data.json')
+
     perguntas = PerguntasSelect.load_questao(data, tema)
     
     if not perguntas:
@@ -30,11 +30,21 @@ def iniciar_quiz(tema: PergType):
 
 # Endpoint para definir o jogador
 @app.post("/jogador")
-def definir_jogador(jogador_data: JogadorData):
+def definir_jogador(jogador_nome:str):
     # Crie uma instância da classe Jogador com o nome fornecido
-    jogador = Jogador(nome=jogador_data.nome)
+    jogador = Jogador(nome=jogador_nome)
+    
+
+
+    
+    return jogador
+
+# @app.post("/inscrever")
+# def inscrever_jogador(jogador: Jogador):
+    # Crie uma instância da classe Jogador com o nome fornecido
+    # quiz_inscrever = Quiz.inscrever(jogador)
     
     # Faça algo com o jogador, como armazená-lo em um banco de dados ou em uma variável global
     # ...
     
-    return {"mensagem": f"Jogador definido como: {jogador.nome}"}
+    # return quiz_inscrever

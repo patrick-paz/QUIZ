@@ -529,27 +529,27 @@
     },
     {
         "id": 23,
-        "pergunta": "Qual é o processo pelo qual as plantas convertem a luz solar em energia?",
+        "pergunta": "O que é a tabela periódica?",
         "resposta": [
             {
-                "opcao": "Fotossíntese",
+                "opcao": "Uma lista de compostos orgânicos",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Um guia para nomenclatura química",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Uma organização dos elementos químicos de acordo com suas propriedades",
                 "resCorreta": true
             },
             {
-                "opcao": "Respiração",
-                "resCorreta": false
-            },
-            {
-                "opcao": "Transpiração",
-                "resCorreta": false
-            },
-            {
-                "opcao": "Germinação",
+                "opcao": "Um conjunto de regras para reações químicas",
                 "resCorreta": false
             }
         ],
-        "tema": "biologia",
-        "dificuldade": 2
+        "tema": "química",
+        "dificuldade": 1
     },
     {
         "id": 24,
@@ -812,7 +812,7 @@
                 "resCorreta": false
             }
         ],
-        "tema": "quimica",
+        "tema": "química",
         "dificuldade": 1
     },
     {
@@ -865,50 +865,50 @@
     },
     {
         "id": 37,
-        "pergunta": "Qual é o país mais populoso da África?",
+        "pergunta": "Qual é a maior lua de Júpiter?",
         "resposta": [
             {
-                "opcao": "Nigéria",
+                "opcao": "Io",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Europa",
                 "resCorreta": true
             },
             {
-                "opcao": "Etiópia",
+                "opcao": "Ganimedes",
                 "resCorreta": false
             },
             {
-                "opcao": "Egito",
-                "resCorreta": false
-            },
-            {
-                "opcao": "África do Sul",
+                "opcao": "Calisto",
                 "resCorreta": false
             }
         ],
-        "tema": "geografia",
+        "tema": "astronomia",
         "dificuldade": 2
     },
     {
         "id": 38,
-        "pergunta": "Qual é a capital do Canadá?",
+        "pergunta": "Quantos planetas existem no sistema solar?",
         "resposta": [
             {
-                "opcao": "Montreal",
-                "resCorreta": false
-            },
-            {
-                "opcao": "Ottawa",
+                "opcao": "8",
                 "resCorreta": true
             },
             {
-                "opcao": "Toronto",
+                "opcao": "9",
                 "resCorreta": false
             },
             {
-                "opcao": "Vancouver",
+                "opcao": "10",
+                "resCorreta": false
+            },
+            {
+                "opcao": "7",
                 "resCorreta": false
             }
         ],
-        "tema": "geografia",
+        "tema": "astronomia",
         "dificuldade": 1
     },
     {
@@ -932,33 +932,283 @@
                 "resCorreta": true
             }
         ],
-        "tema": "quimica",
+        "tema": "química",
         "dificuldade": 2
     },
     {
         "id": 40,
-        "pergunta": "Qual é o maior rio do mundo em termos de volume de água?",
+        "pergunta": "Qual é a estrela mais próxima da Terra?",
         "resposta": [
             {
-                "opcao": "Rio Amazonas",
+                "opcao": "Proxima Centauri",
                 "resCorreta": true
             },
             {
-                "opcao": "Rio Nilo",
+                "opcao": "Alfa Centauri A",
                 "resCorreta": false
             },
             {
-                "opcao": "Rio Yangtzé",
+                "opcao": "Betelgeuse",
                 "resCorreta": false
             },
             {
-                "opcao": "Rio Mississippi",
+                "opcao": "Sirius",
                 "resCorreta": false
             }
         ],
-        "tema": "geografia",
+        "tema": "astronomia",
         "dificuldade": 2
+    },
+    {
+        "id": 41,
+        "pergunta": "Qual é o nome da galáxia em que a Terra está localizada?",
+        "resposta": [
+            {
+                "opcao": "Andrômeda",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Via Láctea",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Triângulo",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Sombrero",
+                "resCorreta": false
+            }
+        ],
+        "tema": "astronomia",
+        "dificuldade": 1
+    },
+    {
+        "id": 42,
+        "pergunta": "Qual é o nome do primeiro telescópio espacial lançado pela NASA?",
+        "resposta": [
+            {
+                "opcao": "Hubble",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Kepler",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Chandra",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Spitzer",
+                "resCorreta": false
+            }
+        ],
+        "tema": "astronomia",
+        "dificuldade": 2
+    },
+    {
+        "id": 43,
+        "pergunta": "Qual é o nome do fenômeno em que a Lua cobre completamente o Sol?",
+        "resposta": [
+            {
+                "opcao": "Eclipse lunar",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Eclipse solar",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Trânsito de Mercúrio",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Cometa",
+                "resCorreta": false
+            }
+        ],
+        "tema": "astronomia",
+        "dificuldade": 1
+    },
+    {
+        "id": 44,
+        "pergunta": "Qual é a estrela mais brilhante no céu noturno visto da Terra?",
+        "resposta": [
+            {
+                "opcao": "Sirius",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Canopus",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Rigel",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Vega",
+                "resCorreta": false
+            }
+        ],
+        "tema": "astronomia",
+        "dificuldade": 1
+    },
+    {
+        "id": 45,
+        "pergunta": "O que representa a sigla pH?",
+        "resposta": [
+            {
+                "opcao": "Potencial Hidrogênico",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Poder de Hidroxila",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Potência de Hidrogênio",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Peso Hidrostático",
+                "resCorreta": false
+            }
+        ],
+        "tema": "química",
+        "dificuldade": 2
+    },
+    {
+        "id": 46,
+        "pergunta": "Qual é o símbolo químico para o ouro?",
+        "resposta": [
+            {
+                "opcao": "Ag",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Au",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Fe",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Cu",
+                "resCorreta": false
+            }
+        ],
+        "tema": "química",
+        "dificuldade": 1
+    },
+    {
+        "id": 47,
+        "pergunta": "O que é um íon?",
+        "resposta": [
+            {
+                "opcao": "Um átomo com carga elétrica positiva",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Um átomo com carga elétrica negativa",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Um átomo ou molécula com carga elétrica",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Um composto químico",
+                "resCorreta": false
+            }
+        ],
+        "tema": "química",
+        "dificuldade": 2
+    },
+    {
+        "id": 48,
+        "pergunta": "O que é uma reação de neutralização?",
+        "resposta": [
+            {
+                "opcao": "Quando ácido e base reagem para formar água e sal",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Quando dois ácidos reagem entre si",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Quando uma base se dissocia em íons",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Quando um metal reage com um não metal",
+                "resCorreta": false
+            }
+        ],
+        "tema": "química",
+        "dificuldade": 1
+    },
+    {
+        "id": 49,
+        "pergunta": "O que é um polímero?",
+        "resposta": [
+            {
+                "opcao": "Um metal",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Um composto iônico",
+                "resCorreta": false
+            },
+            {
+                "opcao": "Uma molécula grande composta por unidades repetitivas",
+                "resCorreta": true
+            },
+            {
+                "opcao": "Um gás nobre",
+                "resCorreta": false
+            }
+        ],
+        "tema": "química",
+        "dificuldade": 2
+    },
+    {
+        "id": 50,
+        "pergunta": "Qual é a fórmula química da água?",
+        "resposta": [
+            {
+                "opcao": "CO2",
+                "resCorreta": false
+            },
+            {
+                "opcao": "H2O",
+                "resCorreta": true
+            },
+            {
+                "opcao": "CH4",
+                "resCorreta": false
+            },
+            {
+                "opcao": "O2",
+                "resCorreta": false
+            }
+        ],
+        "tema": "química",
+        "dificuldade": 1
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 ]
