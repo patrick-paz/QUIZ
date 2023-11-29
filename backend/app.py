@@ -26,7 +26,7 @@ class Jogador(Observer):
             
     def atualizar(self):
         self.acertos += 1
-        
+
         # print()
         # print("#"*18)
         # print(f"### ACERTOS: {self.acertos} ###")
@@ -48,12 +48,13 @@ class TemaStrategy:
         pass
 
 class SelecaoPorTema(TemaStrategy):
-    def selecionar(perguntas, tema):
-        return [pergunta for pergunta in perguntas if pergunta.tema == tema]
+    def selecionar(perguntas, tema, qtd_perguntas):
+        numero_perguntas = qtd_perguntas
+        return random.sample([pergunta for pergunta in perguntas if pergunta.tema == tema], numero_perguntas)
 
 class SelecaoAleatoria(TemaStrategy):
-    def selecionar(perguntas):
-        numero_perguntas = 10
+    def selecionar(perguntas, qtd_perguntas):
+        numero_perguntas = qtd_perguntas
         return random.sample([pergunta for pergunta in perguntas], numero_perguntas)
 
 class PergType(Enum):
@@ -95,7 +96,7 @@ class PerguntasFactory:
         # load
 class PerguntasSelect:
     
-    def load_questao(data, tema: PergType):
+    def load_questao(data, tema: PergType, qtd_perguntas):
         perguntas = []
         perguntas_select = []
         for pergunta_data in data:
@@ -103,9 +104,9 @@ class PerguntasSelect:
             perguntas.append(pergunta)
             
         if tema != PergType.ALEATORIO:
-            perguntas_select = SelecaoPorTema.selecionar(perguntas, tema.value)
+            perguntas_select = SelecaoPorTema.selecionar(perguntas, tema.value, qtd_perguntas)
         elif tema == PergType.ALEATORIO:
-            perguntas_select = SelecaoAleatoria.selecionar(perguntas)
+            perguntas_select = SelecaoAleatoria.selecionar(perguntas, qtd_perguntas)
         
         return perguntas_select
 
@@ -180,10 +181,9 @@ def testar_terminal():
             print("Tema inválido. Por favor, escolha um tema válido.")
     
     print()
-    perguntas = []
-    perguntas = PerguntasSelect.load_questao(data, tema_enum)
-    
     qtdperg = int(input("Quantas perguntas deseja: "))
+    perguntas = []
+    perguntas = PerguntasSelect.load_questao(data, tema_enum, qtdperg)
     
     quiz = Quiz(perguntas, qtdperg)
     quiz.inscrever(jogador)
@@ -196,6 +196,6 @@ def testar_terminal():
     print("="*40)
 
         
-# if __name__ == "__main__":
+if __name__ == "__main__":
     
-#     testar_terminal()
+    testar_terminal()
