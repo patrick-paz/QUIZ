@@ -35,9 +35,6 @@ def definir_jogador(jogador_nome:str):
     # Crie uma instância da classe Jogador com o nome fornecido
     jogador = Jogador(nome=jogador_nome)
     
-
-
-    
     return jogador
 
 # @app.post("/inscrever")
