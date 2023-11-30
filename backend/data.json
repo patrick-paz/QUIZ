@@ -548,7 +548,7 @@
                 "resCorreta": false
             }
         ],
-        "tema": "química",
+        "tema": "quimica",
         "dificuldade": 1
     },
     {
@@ -812,7 +812,7 @@
                 "resCorreta": false
             }
         ],
-        "tema": "química",
+        "tema": "quimica",
         "dificuldade": 1
     },
     {
@@ -932,7 +932,7 @@
                 "resCorreta": true
             }
         ],
-        "tema": "química",
+        "tema": "quimica",
         "dificuldade": 2
     },
     {
@@ -1076,7 +1076,7 @@
                 "resCorreta": false
             }
         ],
-        "tema": "química",
+        "tema": "quimica",
         "dificuldade": 2
     },
     {
@@ -1100,7 +1100,7 @@
                 "resCorreta": false
             }
         ],
-        "tema": "química",
+        "tema": "quimica",
         "dificuldade": 1
     },
     {
@@ -1124,7 +1124,7 @@
                 "resCorreta": false
             }
         ],
-        "tema": "química",
+        "tema": "quimica",
         "dificuldade": 2
     },
     {
@@ -1148,7 +1148,7 @@
                 "resCorreta": false
             }
         ],
-        "tema": "química",
+        "tema": "quimica",
         "dificuldade": 1
     },
     {
@@ -1172,12 +1172,12 @@
                 "resCorreta": false
             }
         ],
-        "tema": "química",
+        "tema": "quimica",
         "dificuldade": 2
     },
     {
         "id": 50,
-        "pergunta": "Qual é a fórmula química da água?",
+        "pergunta": "Qual é a fórmula quimica da água?",
         "resposta": [
             {
                 "opcao": "CO2",
@@ -1196,7 +1196,7 @@
                 "resCorreta": false
             }
         ],
-        "tema": "química",
+        "tema": "quimica",
         "dificuldade": 1
     }
     
