@@ -2,12 +2,14 @@
 	let value;
 	import Alert from './Alert.svelte';
 
-	function handleSubmit(e) {
+	let data = []
+	async function handleSubmit(e) {
 		if (value <= 0 || value > 10) {
 			e.preventDefault();
 			localStorage.setItem('jogador', e.nome);
 			localStorage.setItem('tema', e.tema);
 			localStorage.setItem('qtd', e.qtd);
+			data = await load({ url: new URL(window.location.href) });
 			console.log(localStorage.getItem('jogador'));
 			new Alert({
 				target: document.getElementById('alert-container'),

@@ -1,20 +1,19 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app import PerguntasLoader, Jogador, Quiz, PerguntasSelect, PergType
 
 app = FastAPI()
 
-# Modelo Pydantic para receber dados do jogador
-# class JogadorData(BaseModel):
-#     nome: str
 
-# Endpoint para carregar perguntas
-# @app.get("/questoes")
-# def carregar_questao():
-#     data = 'data.json'
-#     questoes = PerguntasLoader.carregar_perguntas(data)
-#     return questoes
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Endpoint para iniciar o quiz
 @app.post("/questoes")
 def questões_quiz(tema: PergType, qtd_perg: int):

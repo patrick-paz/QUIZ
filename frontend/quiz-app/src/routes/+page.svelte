@@ -11,13 +11,11 @@
 		<h2>Preencha os dados para começar:</h2>
 
 		<span> Start Quiz </span>
-		{#if !data.qtd}
+		{#if !data.props.qtd}
 			<InicioJogo />
 		{/if}
-
-		{#if data.qtd > 0}
-		{console.log(data.perguntas)}
-			<Perguntas questions={data.perguntas} />
+		{#if data.props.qtd > 0}
+			<Perguntas questions={data.props.perguntas} />
 		{/if}
 	</div>
 </section>
