@@ -16,7 +16,7 @@ export async function load({ url }) {
 
         const perguntas_selecionadas = await questoesTema(tema, qtd);
 
-  
+
 
         return {
             props: {
