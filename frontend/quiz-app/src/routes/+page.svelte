@@ -9,7 +9,7 @@
 
 	console.log(data.props.perguntas);
 
-	function handleAnswerSelect(answerIndex) {
+	export function handleAnswerSelect(answerIndex) {
 		if (userAnswers[currentQuestionIndex] !== null) {
 			return;
 		}
@@ -45,10 +45,7 @@
 			/>
 
 			<div class="flex justify-center mt-4">
-				<button
-					
-					on:click={nextQuestion}
-				>
+				<button on:click={nextQuestion}>
 					{currentQuestionIndex !== data.props.qtd ? 'Próximo' : 'Acabou'}
 				</button>
 			</div>

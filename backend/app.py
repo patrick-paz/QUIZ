@@ -41,6 +41,7 @@ class Pergunta:
         self.tema = tema
         self.dificuldade = dificuldade
         self.resposta_correta = resposta_correta
+
         
 
 class TemaStrategy:

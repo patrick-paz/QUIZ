@@ -5,12 +5,7 @@
 	export let userAnswers = [];
 	export let currentQuestionIndex;
 
-	export function handleAnswerSelect(index) {
-
-		userAnswers[currentQuestionIndex] = index;
-
-
-	}
+	export let handleAnswerSelect;
 
 </script>
 
