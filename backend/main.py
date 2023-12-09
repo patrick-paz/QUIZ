@@ -1,10 +1,18 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from app import PerguntasLoader, Jogador, Quiz, PerguntasSelect, PergType
+from app import PerguntasLoader, PerguntasSelect, PergType, Quiz, Jogador, Pergunta
 
 app = FastAPI()
 
+class JogadorModel(BaseModel):
+    
+    nome: str
+
+class RepostasModel(BaseModel):
+    
+    jogador_resposta: str
+    resposta_correta: str
 
 
 app.add_middleware(
@@ -29,19 +37,31 @@ def questões_quiz(tema: PergType, qtd_perg: int):
     return perguntas
 
 # Endpoint para definir o jogador
-@app.post("/jogador")
-def definir_jogador(jogador_nome:str):
-    # Crie uma instância da classe Jogador com o nome fornecido
-    jogador = Jogador(nome=jogador_nome)
-    
-    return jogador
+jogador_global = None
 
-# @app.post("/inscrever")
-# def inscrever_jogador(jogador: Jogador):
-    # Crie uma instância da classe Jogador com o nome fornecido
-    # quiz_inscrever = Quiz.inscrever(jogador)
+@app.post("/definir_jogador", response_model=JogadorModel)
+def definir_jogador(jogador: JogadorModel):
+    global jogador_global
+    jogador_global = Jogador(nome=jogador.nome)
+    return {"nome": jogador_global.nome}
+
+@app.get("/get_jogador")
+def get_jogador():
+    global jogador_global
+    if jogador_global is None:
+        raise HTTPException(status_code=404, detail="Jogador não definido.")
+    return {"nome": jogador_global.nome, "acertos": jogador_global.acertos}
+
+@app.post("/atualizar_acerto")
+def atualizar_acerto(dados: RepostasModel):
+    global jogador_global
     
-    # Faça algo com o jogador, como armazená-lo em um banco de dados ou em uma variável global
-    # ...
+    jogador_resposta = dados.jogador_resposta
+    resposta_correta = dados.resposta_correta
     
-    # return quiz_inscrever
+    aviso = Pergunta.corrigir(jogador_resposta, resposta_correta, jogador_global)
+    
+    return aviso
+    
+
+

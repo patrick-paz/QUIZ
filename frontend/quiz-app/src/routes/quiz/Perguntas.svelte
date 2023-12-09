@@ -8,7 +8,7 @@
 	}
 
 
-	let isAnswered;
+	export let isAnswered;
 
 	export let userAnswer;
 

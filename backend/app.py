@@ -26,6 +26,7 @@ class Jogador(Observer):
             
     def atualizar(self):
         self.acertos += 1
+    
 
         # print()
         # print("#"*18)
@@ -44,6 +45,17 @@ class Pergunta:
 
         
 
+    def corrigir(res_jogador, res_correta, jogador):
+        if(res_jogador == res_correta):
+            Jogador.atualizar(jogador)
+            
+            message = "Resposta correta"
+            
+        else:
+            
+            message = f"Errou! A resposta correta é: {res_correta}"
+            
+        return message
 class TemaStrategy:
     def selecionar(tema):
         pass
