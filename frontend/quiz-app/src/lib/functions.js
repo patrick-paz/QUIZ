@@ -63,11 +63,12 @@ export async function corrigirResposta(resJogador, resCorreta) {
     if (res.ok) {
 
         const resok = await res.json();
-        resposta = resok.detail;
+        resposta = resok;
+        console.log(resposta)
 
     } else {
         const erro = await res.json();
-        resposta = erro.detail;
+        resposta = erro;
     }
     return resposta
 }
