@@ -1,4 +1,4 @@
-import { getPerguntas } from "../lib/getPerguntas.js";
+import { getPerguntas, definirJogador } from "../lib/functions.js";
 
 export async function load({ url }) {
     const qtd = url.searchParams.get("qtd");
@@ -6,6 +6,8 @@ export async function load({ url }) {
     const tema = url.searchParams.get("tema");
 
     let questoes = [];
+
+    definirJogador(nome)
 
     if (qtd > 0) {
         async function questoesTema(tema, qtd) {
