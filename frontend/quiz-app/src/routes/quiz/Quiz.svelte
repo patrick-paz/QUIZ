@@ -48,7 +48,7 @@
 	</button>
 </div>
 
-<div class="bg-black rounded-xl px-4 py-5">
+<div class="container-fluid border border-light w-100 m-5">
 	<p class="text-xs font-light" class:show>
 		Tema escolhido: {quizQuestions[currentQuestionIndex]?.tema}
 	</p>
@@ -57,12 +57,14 @@
 	</p>
 
 	{#if currentQuestionIndex < quizQuestions.length}
-		<h1>{quizQuestions[currentQuestionIndex].pergunta}</h1>
-		<div class="flex flex-col gap-2">
+
+	<div class="container-sm ">
+		<h1 class="text-center" >{quizQuestions[currentQuestionIndex].pergunta}</h1>
+		<div class="btn-group-vertical w-100 p-3" role="group" aria-label="Vertical button group">
 			{#each quizQuestions[currentQuestionIndex].respostas as answer, index}
 				<button
 					class="
-				btn btn-outline-primary
+				btn btn-outline-primary p-3 m-2
 				{userAnswer !== null && userAnswer !== undefined
 						? answer === quizQuestions[currentQuestionIndex].resposta_correta
 							? 'btn btn-outline-success'
@@ -79,6 +81,7 @@
 				</button>
 			{/each}
 		</div>
+	</div>
 	{:else}
 		<Pontos qtdTotal={quizQuestions.length} />
 	{/if}
@@ -91,4 +94,5 @@
 	.show {
 		display: none;
 	}
+
 </style>
