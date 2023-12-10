@@ -21,34 +21,67 @@
 		}
 	}
 </script>
+<div class='container'>
+	<h2>Preencha os dados para começar:</h2>
+	<form action="/" on:submit={handleSubmit}>
+		<div class="input-form mb-3">
+			<input
+				class="form-control"
+				type="number"
+				min="1"
+				max="10"
+				name="qtd"
+				bind:value
+				placeholder="Informe o número de questões (entre 1 e 10)"
+			/>
+		</div>
+		<div class="input-form mb-3">
+			<input class="form-control" name="nome" placeholder="Seu nome" />
+		</div>
+		<div class="input-form mb-3">
+			<select class="form-select form-select-sm" name="tema" placeholder="Selecione o tema">
+				<option value="capitais" selected>Capitais</option>
+				<option value="biologia">Biologia</option>
+				<option value="quimica">Quimica</option>
+				<option value="astronomia">Astronomia</option>
+				<option value="geografia">Geografia</option>
+				<option value="aleatorio">Aleatorio</option>
+			</select>
+		</div>
+		<div class="d-grid gap-2 col-6 mx-auto">
+			<button class="btn btn-primary" type="submit">Iniciar quiz</button>
+		</div>
+	</form>
+</div>
 
-<h2>Preencha os dados para começar:</h2>
-<form action="/" on:submit={handleSubmit}>
-	<div class="mb-3">
-		<input
-			class="form-control"
-			type="number"
-			min="1"
-			max="10"
-			name="qtd"
-			bind:value
-			placeholder="Informe o número de questões (entre 1 e 10)"
-		/>
-	</div>
-	<div class="mb-3">
-		<input class="form-control" name="nome" placeholder="Seu nome" />
-	</div>
-	<div class="mb-3">
-		<select class="form-select form-select-sm" name="tema" placeholder="Selecione o tema">
-			<option value="capitais" selected>Capitais</option>
-			<option value="biologia">Biologia</option>
-			<option value="quimica">Quimica</option>
-			<option value="astronomia">Astronomia</option>
-			<option value="geografia">Geografia</option>
-			<option value="aleatorio">Aleatorio</option>
-		</select>
-	</div>
-	<div class="d-grid gap-2 col-6 mx-auto">
-		<button class="btn btn-primary" type="submit">Start Game</button>
-	</div>
-</form>
+<style>
+
+.container{
+	border: 1;
+	border-style: solid;
+	border-color: black;
+	padding: 65px 65px 65px;
+	background-color: #2E2EFE;
+}
+.input-form{
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto; 
+	height: 100%;
+}
+h2{
+	padding: 10px 10px 10px;
+	margin-bottom: 20px;
+}
+.btn{
+	background-color: #FF0000;
+	border: 3px;
+	border-style: solid;
+	border-color: black;
+}
+button:hover {
+  background-color: #B40404;
+}
+</style>

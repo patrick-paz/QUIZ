@@ -5,18 +5,19 @@
 </script>
 
 <body class="body full-height">
+	<div class='container'>
+		<h1>Quiz - app</h1>
+		<div class="container text-white">
+			
+			<div>
+				{#if !data.props.qtd}
+					<InicioJogo />
+				{/if}
 
-	<h1>Quiz - app</h1>
-	<div class="container bg-dark text-white">
-
-		<div>
-			{#if !data.props.qtd}
-				<InicioJogo />
-			{/if}
-
-			{#if data.props.qtd > 0}
-				<Quiz quizQuestions={data.props.perguntas} />
-			{/if}
+				{#if data.props.qtd > 0}
+					<Quiz quizQuestions={data.props.perguntas} />
+				{/if}
+			</div>
 		</div>
 	</div>
 </body>
@@ -25,24 +26,26 @@
 <style>
     .body {
         margin: 0;
-        padding: 0;
-		background-color: black;
-		
+        padding: 0;	
+		background: url('https://img.freepik.com/premium-vector/vector-seamless-pattern-question-marks-quiz-background_574806-1824.jpg');	
     }
 
     .container {
         display: flex;
         align-items: center;
-        justify-content: center;
-        height: 100vh; /* Altura total da janela */
+        height: 100vh; 
+		flex-direction: column; 
+        justify-content: flex-start;
     }
 
     .full-height {
-        height: 100%; /* Altura total da janela */
+        height: 100%;
     }
 
 	h1 {
 		text-align: center;
-		color: blue;
+		color:#2E2EFE;
+		margin-bottom: 30px; 
+		margin-top: 65px; 
 	}
 </style>
