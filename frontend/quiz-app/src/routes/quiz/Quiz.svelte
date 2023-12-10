@@ -2,7 +2,7 @@
 	import CheckmarkIcon from '../../icon/CheckmarkIcon.svelte';
 	import Pontos from './Pontos.svelte';
 	import { corrigirResposta } from '../../lib/functions';
-	import Modal from "./Modal.svelte";
+	import Modal from './Modal.svelte';
 
 	export let quizQuestions = [];
 	export let currentQuestionIndex = 0;
@@ -20,18 +20,15 @@
 		isAnswered = true;
 
 		try {
+			const notificationMessage = await corrigirResposta(resJogador, resCorreta);
 
-        const notificationMessage = await corrigirResposta(resJogador, resCorreta);
+			console.log(notificationMessage);
 
-        console.log(notificationMessage);
-
-        showNotification = true;
-        message = notificationMessage;
-
-    } catch (error) {
-        console.error("Erro ao corrigir resposta:", error);
-
-    }
+			showNotification = true;
+			message = notificationMessage;
+		} catch (error) {
+			console.error('Erro ao corrigir resposta:', error);
+		}
 	}
 
 	function nextQuestion() {
@@ -46,12 +43,15 @@
 </script>
 
 <div class="flex justify-center mt-4">
-	<button on:click={nextQuestion} class:show>
+	<button class="btn btn-success" on:click={nextQuestion} class:show>
 		{currentQuestionIndex + 1 !== quizQuestions.length ? 'Próximo' : 'Acabou'}
 	</button>
 </div>
 
-<div class="bg-white rounded-xl px-4 py-5">
+<div class="bg-black rounded-xl px-4 py-5">
+	<p class="text-xs font-light" class:show>
+		Tema escolhido: {quizQuestions[currentQuestionIndex]?.tema}
+	</p>
 	<p class="text-xs font-light" class:show>
 		Pergunta {currentQuestionIndex + 1}/{quizQuestions.length}
 	</p>
@@ -76,7 +76,6 @@
 						<CheckmarkIcon />
 					{/if}
 					{answer}
-					{isAnswered}
 				</button>
 			{/each}
 		</div>
@@ -87,6 +86,7 @@
 <Modal bind:showNotification>
 	{message}
 </Modal>
+
 <style>
 	.show {
 		display: none;

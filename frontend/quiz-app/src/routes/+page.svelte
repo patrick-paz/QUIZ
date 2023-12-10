@@ -2,25 +2,47 @@
 	export let data;
 	import InicioJogo from './quiz/InicioJogo.svelte';
 	import Quiz from './quiz/Quiz.svelte';
-
-
-
-
-
 </script>
 
-<section>
+<body class="body full-height">
+
 	<h1>Quiz - app</h1>
-	<div>
+	<div class="container bg-dark text-white">
 
-		{#if !data.props.qtd}
-			<InicioJogo />
-		{/if}
+		<div>
+			{#if !data.props.qtd}
+				<InicioJogo />
+			{/if}
 
-		{#if data.props.qtd > 0}
-			<Quiz
-				quizQuestions={data.props.perguntas}
-			/>
-		{/if}
+			{#if data.props.qtd > 0}
+				<Quiz quizQuestions={data.props.perguntas} />
+			{/if}
+		</div>
 	</div>
-</section>
+</body>
+
+
+<style>
+    .body {
+        margin: 0;
+        padding: 0;
+		background-color: black;
+		
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Altura total da janela */
+    }
+
+    .full-height {
+        height: 100%; /* Altura total da janela */
+    }
+
+	h1 {
+		text-align: center;
+		color: blue;
+	}
+</style>

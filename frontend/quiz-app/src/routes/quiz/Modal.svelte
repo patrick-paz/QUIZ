@@ -13,13 +13,14 @@
 	on:click|self={() => dialog.close()}
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div on:click|stopPropagation>
+
+	<div class="modal-content" on:click|stopPropagation>
 		<slot name="header" />
 		<hr />
 		<slot />
 		<hr />
 		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={() => dialog.close()}>close modal</button>
+		<button class="btn btn-primary" autofocus on:click={() => dialog.close()}>Fechar</button>
 	</div>
 </dialog>
 
