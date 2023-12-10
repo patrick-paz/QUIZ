@@ -72,3 +72,15 @@ export async function corrigirResposta(resJogador, resCorreta) {
     return resposta
 }
 
+
+//#########################################################
+
+export async function getAcertos() {
+
+    const res = await fetch(`http://127.0.0.1:8000/get_jogador`, {
+        method: 'GET'
+    });
+    const json = await res.json();
+    perguntas = json;
+    return perguntas;
+}

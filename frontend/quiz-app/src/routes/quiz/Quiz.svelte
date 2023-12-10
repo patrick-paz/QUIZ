@@ -1,6 +1,7 @@
 <script>
 	import CheckmarkIcon from '../../icon/CheckmarkIcon.svelte';
-	import { corrigirResposta } from "../../lib/functions";
+	import Pontos from './Pontos.svelte';
+	import { corrigirResposta } from '../../lib/functions';
 
 	export let quizQuestions = [];
 	export let currentQuestionIndex = 0;
@@ -14,7 +15,7 @@
 		userAnswer = index;
 		isAnswered = true;
 
-		corrigirResposta(resJogador,resCorreta)
+		corrigirResposta(resJogador, resCorreta);
 	}
 
 	function nextQuestion() {
@@ -37,19 +38,20 @@
 		Pergunta {currentQuestionIndex + 1}/{quizQuestions.length}
 	</p>
 
-	{#if quizQuestions && Array.isArray(quizQuestions)}
+	{#if currentQuestionIndex < quizQuestions.length}
 		<h1>{quizQuestions[currentQuestionIndex].pergunta}</h1>
 		<div class="flex flex-col gap-2">
 			{#each quizQuestions[currentQuestionIndex].respostas as answer, index}
 				<button
-				class="
+					class="
 				btn btn-outline-primary
 				{userAnswer !== null && userAnswer !== undefined
-					? answer === quizQuestions[currentQuestionIndex].resposta_correta
-						? 'btn btn-outline-success'
-						: 'btn btn-outline-danger'
-					: 'btn btn-outline-secondary'}"
-					on:click={() => handleAnswerSelect(index, answer, quizQuestions[currentQuestionIndex].resposta_correta)}
+						? answer === quizQuestions[currentQuestionIndex].resposta_correta
+							? 'btn btn-outline-success'
+							: 'btn btn-outline-danger'
+						: 'btn btn-outline-secondary'}"
+					on:click={() =>
+						handleAnswerSelect(index, answer, quizQuestions[currentQuestionIndex].resposta_correta)}
 					disabled={isAnswered}
 				>
 					{#if userAnswer === index}
@@ -60,5 +62,7 @@
 				</button>
 			{/each}
 		</div>
+	{:else}
+		<Pontos qtdTotal={quizQuestions.length} />
 	{/if}
 </div>

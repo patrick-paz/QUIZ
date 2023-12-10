@@ -20,10 +20,7 @@
 		{#if data.props.qtd > 0}
 			<Quiz
 				quizQuestions={data.props.perguntas}
-
 			/>
-
-
 		{/if}
 	</div>
 </section>
