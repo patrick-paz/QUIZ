@@ -1,6 +1,5 @@
 <script>
 	let value;
-	import Alert from './Alert.svelte';
 
 	let data = [];
 	async function handleSubmit(e) {
@@ -11,13 +10,6 @@
 			localStorage.setItem('qtd', e.qtd);
 			data = await load({ url: new URL(window.location.href) });
 			console.log(localStorage.getItem('jogador'));
-			new Alert({
-				target: document.getElementById('alert-container'),
-				props: {
-					color: 'danger',
-					message: 'Selecione um número entre 1 e 10'
-				}
-			});
 		}
 	}
 </script>
@@ -33,6 +25,8 @@
 				name="qtd"
 				bind:value
 				placeholder="Informe o número de questões (entre 1 e 10)"
+				required
+				
 			/>
 		</div>
 		<div class="input-form mb-3">

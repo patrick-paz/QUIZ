@@ -21,7 +21,7 @@
 </script>
 
 <div class='container'>
-	<h2>Fim de jogo</h2>
+	<h2>Fim de jogo!!</h2>
 	<p>Jogador: {pontos.nome}</p>
 	<p>Pontuação: {pontos.acertos} / {qtdTotal}</p>
 
@@ -37,12 +37,19 @@
 	border-color: black;
 	padding: 70px 70px 70px;
 	background-color: #2E2EFE;
+	align-items: center;
 }
 h2{
 	margin-bottom: 30px;
+
 }
 p{
+	font-weight: bolder;
 	text-align: center;
+	border: solid 2px;
+	border-radius: 10px;
+	padding: 5px;
+	background-color: darkgreen;
 }
 
 .button{
@@ -50,12 +57,15 @@ p{
 	flex-direction: column;
 	align-items: center;
 	margin: auto;
+	margin-top: 30px;
 	background-color: #FF0000; 
 	color: white;
 	font-weight: bolder;
 	border: 3px;
 	border-style: solid;
 	border-color: black;
+	border-radius: 10px;
+	padding: 10px;
 }
 
 
