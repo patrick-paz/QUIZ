@@ -74,6 +74,7 @@ h2{
 	border: 3px;
 	border-style: solid;
 	border-color: black;
+	border-radius: 10px;
 }
 button:hover {
   background-color: #B40404;

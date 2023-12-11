@@ -105,6 +105,7 @@
 	}
 	.button {
 		margin-bottom: 10px;
+		
 	}
 	.btn{
 		border: 2px;
@@ -120,15 +121,18 @@
 		border-style: solid;
 		border-color: black;
 		width: 150px;
+		border-radius: 10px;
 	}
 	.btn-group-vertical {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		margin: auto; 
+		
 	}
 
 	.btn-group-vertical .btn {
 		margin-bottom: 5px; 
+		border-radius: 10px;
 	}
 </style>
