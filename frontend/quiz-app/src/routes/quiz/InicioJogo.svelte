@@ -36,7 +36,7 @@
 			/>
 		</div>
 		<div class="input-form mb-3">
-			<input class="form-control" name="nome" placeholder="Seu nome" />
+			<input class="form-control" name="nome" placeholder="Seu nome" required />
 		</div>
 		<div class="input-form mb-3">
 			<select class="form-select form-select-sm" name="tema" placeholder="Selecione o tema">
