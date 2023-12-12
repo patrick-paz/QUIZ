@@ -1,9 +1,9 @@
-Quiz App Readme
+#Quiz App Readme
 Este é o repositório do aplicativo de quiz, uma aplicação interativa para testar seus conhecimentos. Abaixo estão as instruções para configurar e executar o aplicativo em seu ambiente local.
 
 Configuração do Ambiente
 1. Configurando o Ambiente Virtual (Python)
-bash
+``bash``
 Copy code
 # Criar um ambiente virtual
 python -m venv venv
